@@ -24,14 +24,22 @@ excerpt_link: more
 fancybox: true
 mathjax: true
 
+# 是否开启动画效果
+animate: true
+
+# 是否在新窗口打开链接
+open_in_new: false
+
 # Miscellaneous
 google_analytics: ''
 favicon: /favicon.png
 
 #你的头像url
 avatar: "http://7xi4ih.com1.z0.glb.clouddn.com/avator.jpg"
+   #
 #是否开启分享
-share: true
+share_jia: true
+share_addthis: false
 #是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key
 #若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论
 duoshuo: true
@@ -49,4 +57,8 @@ friends:
 #不开启——
 #aboutme: false
 #开启——
+<<<<<<< HEAD
 aboutme: 无论脚步到达何处，不要忘记手心里的温度
+=======
+aboutme: 我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…
+>>>>>>> ba35fb74e74b3420437174e381436771608639f3

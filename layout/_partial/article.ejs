@@ -24,11 +24,23 @@
       <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
       <% } else { %>
+	<!-- Table of Contents -->
+	<% if (!index && post.toc){ %>
+	<div id="toc" class="toc-article">
+	<strong class="toc-title">文章目录</strong>
+	<%- toc(post.content,{list_number:true}) %>
+	</div>
+	<% } %>
         <%- post.content %>
       <% } %>
     </div>
     <% if (index){ %>
     <div class="article-info article-info-index">
+      <%if(post.top){%>
+        <div class="article-pop-out tagcloud">
+          <a class="">置顶</a>
+        </div>
+      <% } %>
       <%- partial('post/tag') %>
       <%- partial('post/category') %>
       <% if (post.excerpt && index){ %>
@@ -45,8 +57,12 @@
   <% } %>
 </article>
 
-<% if (!index && theme.share){ %>
-<%- partial('post/share') %>
+<% if (!index && theme.share_jia){ %>
+<%- partial('post/share_jia') %>
+<% } %>
+
+<% if (!index && theme.share_addthis){ %>
+<%- partial('post/share_addthis') %>
 <% } %>
 
 <% if (!index && theme.duoshuo && post.comments){ %>
